@@ -94,10 +94,12 @@ form {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
 }
 
 form>* {
     margin: 10px;
+    text-align: left;
 }
 
 form span {
@@ -127,7 +129,7 @@ button:hover {
     transform: scale(1.1);
 }
 
-button:disabled{
+button:disabled {
     cursor: not-allowed;
     background-color: #777c81;
 }

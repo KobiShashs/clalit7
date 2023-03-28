@@ -1,17 +1,23 @@
 import { useEffect, useState } from "react";
 import "./TotalTasks.css";
 import axios from "axios";
+import urlService from "../../../Services/UrlService";
+import store, { RootState } from "../../../Redux/Store";
+import { Root } from "react-dom/client";
+import { useSelector } from "react-redux";
 
 function TotalTasks(): JSX.Element {
-    const url = "http://localhost:8080/api/tasks/count";
-    const [total, setTotal] = useState<number>(0);
+
+
+    // const [total, setTotal] = useState<number>(store.getState().tasksReducer.tasks.length);
+    const total = useSelector((store: RootState) => store.tasksReducer.tasks.length)
 
     //Mounting ~ componentDidMount
-    useEffect(() => {
-        axios.get(url)
-            .then(res=>setTotal(res.data))
-            .catch(err => console.log(err));
-    }, []);
+    // useEffect(() => {
+    //     axios.get(urlService.urls.tasks + "/count")
+    //         .then(res => setTotal(res.data))
+    //         .catch(err => console.log(err));
+    // }, []);
 
 
     return (
