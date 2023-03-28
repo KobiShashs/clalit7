@@ -1,6 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Rasa:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 
+
+:root {
+    --primary-color: #aaaaaa;
+    --secondary-color: #267cd2;
+    --background-color: #000000;
+
+    --font-small: 10px;
+    --font-medium: 22px;
+    --font-large: 36px;
+}
+
+.dark-mode {
+    color: var(--primary-color);
+    background-color: var(--background-color);
+}
+
+.light-mode {
+    color: var(--background-color);
+    background-color: var(--primary-color);
+}
+
+
+
 body {
     margin: 0;
     font-family: 'Rasa';
